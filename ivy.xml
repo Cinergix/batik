@@ -1,0 +1,26 @@
+
+<ivy-module version="2.0">
+    <info organisation="org.apache" module="CSL"/>
+    <dependencies>
+        
+        <dependency org="Cinergix" name="batik-anim" rev="" conf="default" />
+        <dependency org="Cinergix" name="batik-awt-util" rev="" conf="default" />
+        <dependency org="Cinergix" name="batik-codec" rev="" conf="default" />
+        <dependency org="Cinergix" name="batik-css" rev="" conf="default" />
+        <dependency org="Cinergix" name="batik-dom" rev="" conf="default" />
+        <dependency org="Cinergix" name="batik-ext" rev="" conf="default" />
+        <dependency org="Cinergix" name="batik-gvt" rev="" conf="default" />
+        <dependency org="Cinergix" name="batik-parser" rev="" conf="default" />
+        <dependency org="Cinergix" name="batik-script" rev="" conf="default" />
+        <dependency org="Cinergix" name="batik-svg-dom" rev="" conf="default" />
+        <dependency org="Cinergix" name="batik-transcoder" rev="" conf="default" />
+        <dependency org="Cinergix" name="batik-util" rev="" conf="default" />
+        <dependency org="Cinergix" name="batik-xml" rev="" conf="default" />
+        <dependency org="Cinergix" name="w3c" rev="" conf="default" />
+
+        <dependency org="xalan" name="xalan" rev="2.7.1" conf="default"/>
+        <dependency org="xml-apis" name="xml-apis-ext" rev="1.3.04" conf="default"/>
+        <dependency org="xml-apis" name="xmlParserAPIs" rev="2.0.2" conf="default"/>
+ 
+    </dependencies>
+</ivy-module>

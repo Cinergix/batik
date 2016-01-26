@@ -1,0 +1,17 @@
+<ivysettings>
+    <settings defaultResolver="chain"/>
+    <property name="github.pattern" value="[organisation]/cinergix-ivy-repo/master/[module].[ext]"/>
+    <resolvers>
+        <chain name="chain">
+        	<!-- This pointing the default url to maven repo -->
+            <ibiblio name="central" m2compatible="true"/>
+            
+            <!-- This is pointing to cinergix repo in gitub -->
+            <!-- https://github.com/Cinergix/cinergix-ivy-repo/raw/master/backport-util-concurrent-3.1.jar -->
+            <!-- https://raw.githubusercontent.com/Cinergix/cinergix-ivy-repo/master/backport-util-concurrent-3.1.jar -->
+            <!-- We can access/download the files from git using either one of the above urls -->
+            <!-- Here we have used the second url since first url is anyway redirecting to the second url -->
+            <ibiblio name="cinergix" pattern="${github.pattern}" m2compatible="false" root="https://raw.githubusercontent.com"/>
+        </chain>
+    </resolvers>
+</ivysettings>

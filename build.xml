@@ -69,7 +69,7 @@ To display the available targets type:
 
 -->
 
-<project default="help" name="batik" basedir=".">
+<project xmlns:ivy="antlib:org.apache.ivy.ant" default="help" name="batik" basedir=".">
 
   <!-- Configuring the build -->
   <property file="${basedir}/build-local.properties"/>
@@ -126,6 +126,11 @@ To display the available targets type:
     <!-- For site deployment -->
     <property name="deploy.svn.url"     value="https://svn.apache.org/repos/asf/xmlgraphics/site/deploy/batik"/>
     <property name="build.site-dir"     value="${site}"/>
+
+    <!-- inserted by rasi to create the unavailable directories -->
+    <mkdir dir="${resources}" />
+    <mkdir dir="sources-1.4" />
+    <mkdir dir="${lib}" />
   
     <pathconvert property="cwd">
       <path path="."/>
@@ -998,6 +1003,7 @@ JAVA=/usr/bin/java
 
 
   <target name="compile-prepare" depends="init" unless="compile-prepare.done">
+    <ivy:retrieve pattern="${lib}/[artifact].[ext]"/>
     <mkdir dir="${dest}"/>
     <echo message="debug ${debug}, optimize ${optimize}, deprecation ${deprecation}"/>
     <property name="compile-prepare.done" value="true"/>
